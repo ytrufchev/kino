@@ -580,3 +580,20 @@ div.item {
 .caption {
     display: block;
 }
+.noMovies{
+  display: none;
+  width: 80vw;
+  height: 20vh;
+  left: 10vw;
+  top: 40vh;
+  position: absolute;
+  font-family: Kelson-Bold;
+  color: white;
+  font-size: 5vh;
+  border: none;
+  cursor: pointer;
+  background-color:rgba(0,0,0,0.5);
+  border-radius: 25px;
+  text-align: center;
+  line-height: 10vh;
+}

@@ -21,7 +21,6 @@
       function test(){
         //Get the movie names and projection times from the source by cinema ID
       var cinemaId = localStorage.getItem("cinema");
-      console.log(cityName +" : "+ cinemaName);
       var baseUrl = "https://cinema-32109.firebaseio.com/"+encodeURI(cityName)+"/"+encodeURI(cinemaName)+"/MovieNames/.json";
     $.ajax({
      url: baseUrl,
@@ -30,6 +29,9 @@
   "contentType": "application/json; charset=utf-8",
      type: 'GET' // this is default, but worth pointing out
       }).done(function(data){
+        if(data == null){
+          document.getElementById("noMovies").style.display = "block";
+        }
       for(i in data){
         var mId = data[i].id;
         var name1 = JSON.stringify(data[i].name);
@@ -120,7 +122,6 @@ document.getElementById("lds-ripple").style.display = "none";
 
 
                              function projections(i){
-                               console.log(i);
                                  for(j in longnames){
      if(longnames[j] == movienameslist[i]){
        var date1 = JSON.stringify(timestamps[j]);
