@@ -21,6 +21,7 @@
       function test(){
         //Get the movie names and projection times from the source by cinema ID
       var cinemaId = localStorage.getItem("cinema");
+      console.log(cityName +" : "+ cinemaName);
       var baseUrl = "https://cinema-32109.firebaseio.com/"+encodeURI(cityName)+"/"+encodeURI(cinemaName)+"/MovieNames/.json";
     $.ajax({
      url: baseUrl,
